@@ -33,8 +33,8 @@
         /** Perform a GET request and echo the response **/
         /** Note: Set the GET field BEFORE calling buildOauth(); **/
         $url = 'https://api.twitter.com/1.1/search/tweets.json';
-        $getfield = '?q=&geocode=51.502,-2.545,2km';
-        // $getfield = '?q=&geocode=34.097497,-84.517725,2km';
+        $getfield = '?q=&geocode=51.500,-2.549,2km';
+        // $getfield = '?q=&geocode=51.502,-2.578,15km';
         $requestMethod = 'GET';
         $twitter = new TwitterAPIExchange($settings);
         $data=$twitter->setGetfield($getfield)
@@ -60,7 +60,7 @@
         foreach ($phpdata["statuses"] as $status){
           $screen_name = $status["user"]["screen_name"];
           $name = $status["user"]["name"];
-          $tweet = censorString($status["text"], $badwords,'X!°#%$@');
+          $tweet = censorString($status["text"], $badwords);
           $time = date("H:i", strtotime($status["created_at"]));
           $profileimage = $status["user"]["profile_image_url"];
 
