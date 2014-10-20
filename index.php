@@ -55,10 +55,16 @@
         foreach ($phpdata["statuses"] as $status){
           $name = $status["user"]["screen_name"];
           $tweet = $status["text"];
+          $profileimage = $status["user"]["profile_image_url"];
         ?>
         <div class="tweet_box">
           <div class="inner">
-            <p><a href="http://www.twitter.com/<?php echo $name; ?>" target="_blank"><?php echo $name;?></a> tweeted: </p>
+            <p>
+              <a href="http://www.twitter.com/<?php echo $name; ?>" target="_blank">
+                <img src="<?php echo $profileimage; ?>">
+                <?php echo $name;?>
+              </a> tweeted:
+            </p>
             <p> <?php echo $tweet;?> </p>
           </div>
         </div>
