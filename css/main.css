@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  margin-top: 0;
+  height: 90px;
+  color: #FFF;
+  padding-top: 5px;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tweet_box {
+  width: 400px;
+  background: #52B3D9;
+  height: auto;
+  border-radius: 20px;
+  margin: 10px 5px;
+  padding: 13px 0 13px 0;
+  /*display: inline-block;*/
+}
+
+.inner {
+  background: #FFF;
+  margin: 0 auto;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
