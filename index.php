@@ -33,7 +33,7 @@
         /** Perform a GET request and echo the response **/
         /** Note: Set the GET field BEFORE calling buildOauth(); **/
         $url = 'https://api.twitter.com/1.1/search/tweets.json';
-        $getfield = '?q=&geocode=51.500,-2.549,10km';
+        $getfield = '?q=&geocode=51.500,-2.549,2km';
         // $getfield = '?q=&geocode=51.502,-2.578,15km';
         $requestMethod = 'GET';
         $twitter = new TwitterAPIExchange($settings);
