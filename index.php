@@ -61,6 +61,7 @@
           $screen_name = $status["user"]["screen_name"];
           $name = $status["user"]["name"];
           $tweet = censorString($status["text"], $badwords,'X!°#%$@');
+          $time = date("H:i", strtotime($status["created_at"]));
           $profileimage = $status["user"]["profile_image_url"];
 
         ?>
@@ -70,7 +71,7 @@
               <a href="http://www.twitter.com/<?php echo $screen_name; ?>" target="_blank">
                 <img src="<?php echo $profileimage; ?>" alt="<?php echo $name; ?>'s Profile Image">
                 <?php echo $name; ?>
-                <span class="sub">@<?php echo $screen_name;?></span>
+                <span class="sub">@<?php echo $screen_name . " at " . $time; ?></span>
               </a>
             </p>
             <p class="tweet"> <?php echo $tweet['clean'];?> </p>
