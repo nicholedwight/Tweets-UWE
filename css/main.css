@@ -35,18 +35,43 @@ h1 {
 .tweet_box {
   width: 400px;
   background: #52B3D9;
-  height: auto;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 10px 5px;
   padding: 13px 0 13px 0;
   /*display: inline-block;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .inner {
   background: #FFF;
   margin: 0 auto;
-  width: 300px;
+  width: 350px;
   height: auto;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px 10px;
+}
+
+.inner a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tweet {
+  margin: -30px 0 0 61px;
+}
+
+.sub {
+  font-weight: normal;
+  font-size: 12px;
+  color: #666;
+}
+
+.inner img {
+  vertical-align: top;
+  border-radius: 5px;
+  margin-right: 5px;
 }

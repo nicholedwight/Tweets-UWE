@@ -53,7 +53,8 @@
         <?php
         //Loop through the status updates and print out the text of each
         foreach ($phpdata["statuses"] as $status){
-          $name = $status["user"]["screen_name"];
+          $screen_name = "@" . $status["user"]["screen_name"];
+          $name = $status["user"]["name"];
           $tweet = $status["text"];
           $profileimage = $status["user"]["profile_image_url"];
         ?>
@@ -61,11 +62,12 @@
           <div class="inner">
             <p>
               <a href="http://www.twitter.com/<?php echo $name; ?>" target="_blank">
-                <img src="<?php echo $profileimage; ?>">
-                <?php echo $name;?>
-              </a> tweeted:
+                <img src="<?php echo $profileimage; ?>" alt="<?php echo $name; ?>'s Profile Image">
+                <?php echo $name; ?>
+                <span class="sub"><?php echo $screen_name;?></span>
+              </a>
             </p>
-            <p> <?php echo $tweet;?> </p>
+            <p class="tweet"> <?php echo $tweet;?> </p>
           </div>
         </div>
         <?php
