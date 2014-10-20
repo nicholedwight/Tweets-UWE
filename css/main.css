@@ -30,6 +30,7 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 .tweet_box {
@@ -74,4 +75,10 @@ h1 {
   vertical-align: top;
   border-radius: 5px;
   margin-right: 5px;
+}
+
+.proof {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
